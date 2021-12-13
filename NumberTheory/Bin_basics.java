@@ -32,5 +32,13 @@ public class Bin_basics {
         System.out.println("Shift 2 digit to left == multiply with 2*2 i.e. 4");
         System.out.println("Shift 3 digit to left == multiply with 2*2*2 i.e. 8");
         System.out.println("Shift n digit to left == multiply with 2*2*.. upto n times i.e 2 to the power n"); 
+
+        int max_int = (1<<31) - 1; 
+        /**
+         * maximum value for 32 bit integer
+         * but we have stored 31 bits (1<<31) because 1 extra bit is required for sign bit
+         * and the - 1 is because it starts from 0  
+         * */      
+        System.out.println(max_int);
     }
 }
