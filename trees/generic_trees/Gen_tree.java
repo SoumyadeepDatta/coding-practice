@@ -144,13 +144,13 @@ public class Gen_tree {
         /**
          * Note: Here -1 value means backtrack to the parent node
          * 
-         *                    10
-         *                 /  |   \
+         *                     10
+         *                 /   |   \
          *               20   30   40
-         *              / |   | \    \ 
-         *            50  60  70 80  100
-         *                       / \
-         *                      110 120
+         *             / |   / | \    \ 
+         *           50  60 70 80 90  100
+         *                     / \
+         *                   110 120
          */
         Node root = null;
         Stack<Node> stack = new Stack<>();
