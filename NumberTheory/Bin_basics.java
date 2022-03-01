@@ -1,3 +1,5 @@
+package NumberTheory;
+
 import java.io.*;
 import java.lang.*;
 import java.util.*;

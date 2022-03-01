@@ -1,3 +1,5 @@
+package trees.generic_trees;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
