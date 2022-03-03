@@ -1,4 +1,4 @@
-package recursion;
+
 
 /**
  * Link to the problem: https://practice.geeksforgeeks.org/problems/lucky-numbers2911/1/?page=1&difficulty[]=0&status[]=unsolved&category[]=Recursion&sortBy=submissions#
