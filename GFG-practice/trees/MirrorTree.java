@@ -98,7 +98,7 @@ class MirrorTree {
 
             Solution g = new Solution();
             g.mirror(root);
-            GfG mt = new GfG();
+            MirrorTree mt = new MirrorTree();
             mt.inOrder(root);
             System.out.println();
         }

@@ -23,6 +23,6 @@ public class StringPermutation {
         }
     }
     public static void main(String[] args) {
-        printPermutations("above", "");
+        printPermutations("123456", "");
     }
 }
