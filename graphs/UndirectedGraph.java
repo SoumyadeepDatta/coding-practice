@@ -72,6 +72,37 @@ public class UndirectedGraph {
         return false;
     }
 
+    public static ArrayList<Integer> DFS(ArrayList<Edge>[] undirectedGraph){
+        boolean[] visited = new boolean[undirectedGraph.length];
+        ArrayList<Integer> ans = new ArrayList<>();
+        DFSTraversal(undirectedGraph, visited, ans, undirectedGraph[0].get(0).getSource());
+        return ans;
+    }
+
+    public static void DFSTraversal(ArrayList<Edge>[] undirectedGraph, boolean[] visited, ArrayList<Integer> ans, Integer v) {
+        if(visited[v]){
+            return;
+        }
+        else {
+            ans.add(v);
+            visited[v] = true;
+            for(Edge edge : undirectedGraph[v]) {
+                DFSTraversal(undirectedGraph, visited, ans, edge.getSink());
+            }
+        }
+    }
+
+    public static ArrayList<String> DFSAllPaths(ArrayList<Edge>[] undirectedGraph) {
+        boolean[] visited = new boolean[undirectedGraph.length];
+        ArrayList<String> ans = new ArrayList<>();
+
+        return ans;
+    }
+
+    public static void DFSAllPathsTraversal(ArrayList<Edge>[] undirectedGraph) {
+        
+    }
+
     public static void main(String[] args) throws IOException {
 
         InputStreamReader ir = new InputStreamReader(System.in);
@@ -89,7 +120,15 @@ public class UndirectedGraph {
         
         printUndirectedGraph(undirectedGraph);
 
-        boolean[] visited = new boolean[numberOfVertices];
-        System.out.println(hasPath(undirectedGraph, Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()), visited));
+        ArrayList<Integer> dfs = DFS(undirectedGraph);
+
+        System.out.println();
+        for(Integer v : dfs) {
+            System.out.print(v + " ");
+        }
+        System.out.println();
+
+        // boolean[] visited = new boolean[numberOfVertices];
+        // System.out.println(hasPath(undirectedGraph, Integer.parseInt(br.readLine()), Integer.parseInt(br.readLine()), visited));
     }
 }

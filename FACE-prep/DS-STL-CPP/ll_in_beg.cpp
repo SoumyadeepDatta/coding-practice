@@ -16,9 +16,8 @@ Node * head = NULL;
 Node * node = NULL;
 Node * temp = NULL;
 
+void insert_beg(int);
 
-
-void append(int);
 void display(Node *);
 
 int main(int argc, char const *argv[])
@@ -28,39 +27,32 @@ int main(int argc, char const *argv[])
 
     int i;
 
-    // take input until -1 is entered
-
-    while (true){
+    while(1) {
         cin >> i;
-        if(i == -1) {
+        if(i < 0) {
             break;
         }
         else {
-            append(i);
+            insert_beg(i);
         }
     }
-    
+
     display(head);
 
     return 0;
 }
 
-void append(int val) {
-
-    
-
+void insert_beg(int val) {
     if(!head) {
         head = new Node();
         head->data = val;
         head->next = NULL;
-        temp = head;
     }
     else {
         node = new Node();
-        temp->next = node;
         node->data = val;
-        node->next = NULL;
-        temp = node;
+        node->next = head;
+        head = node;
     }
 }
 
